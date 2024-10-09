@@ -22,11 +22,11 @@ interface BorderBeamProps {
 
 export const BorderBeam: React.FC<BorderBeamProps> = ({
   className,
-  size = 2,
+  size = 10,
   duration = 2.5,
   colorFrom = "#4ade80",
   colorTo = "#22c55e",
-  borderRadius = 12 // Ajusta este valor según el radio de borde de tus tarjetas
+  borderRadius = 7 // Ajusta este valor según el radio de borde de tus tarjetas
 }) => {
   return (
     <div className={cn("absolute inset-0 pointer-events-none", className)}>
@@ -38,8 +38,8 @@ export const BorderBeam: React.FC<BorderBeamProps> = ({
           </linearGradient>
         </defs>
         <motion.rect
-          x={size / 2}
-          y={size / 2}
+          x={size / 1.25}
+          y={size / 1.25}
           width={`calc(100% - ${size}px)`}
           height={`calc(100% - ${size}px)`}
           rx={borderRadius}

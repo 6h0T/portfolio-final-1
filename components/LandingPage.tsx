@@ -12,7 +12,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { BorderBeam } from "@/components/magicui/border-beam";
 import Globe from "@/components/magicui/globe";
 import { Linkedin, Dribbble, Behance } from 'react-bootstrap-icons';
-
+import { Analytics } from '@vercel/analytics/react';
 type CategoryType = 'Graphic Design' | 'Web Design' | 'Flyers' | 'Brand Identity';
 
 interface TreeNodeData {
@@ -727,6 +727,7 @@ function scrollToSection(ref: React.RefObject<HTMLElement>) {
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         {/* Home section */}
+        <Analytics />
         <MagicUIBlurFade>
           <motion.section 
             ref={homeRef}
